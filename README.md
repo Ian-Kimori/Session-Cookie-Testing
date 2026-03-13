@@ -34,7 +34,9 @@ You want to determine:
 
 ***
 
-# **3. Step 1 — Identify the Session Token**
+# **3. Testing Phase**
+
+## **Step 1 — Identify the Session Token**
 
 Log in as any user.
 
@@ -57,7 +59,7 @@ Look for session cookies:
 
 ***
 
-# **4. Step 2 — Gather Multiple Session Tokens**
+## **Step 2 — Gather Multiple Session Tokens**
 
 You must collect tokens for:
 
@@ -123,7 +125,7 @@ These are **predictable or forgeable**.
 
 ***
 
-# **5. Step 3 — Test Session Token Predictability**
+## **Step 3 — Test Session Token Predictability**
 
 ### Method:
 
@@ -144,7 +146,7 @@ Attackers can tamper with it → **Session forging risk**.
 
 ***
 
-# **6. Step 4 — Modify the Session Token**
+## **Step 4 — Modify the Session Token**
 
 Using Burp Suite:
 
@@ -175,7 +177,7 @@ Server still accepts the modified token → **token validation weak**.
 
 ***
 
-# **7. Step 5 — Attempt Session Fixation**
+## **Step 5 — Attempt Session Fixation**
 
 Test if token changes after login.
 
@@ -192,7 +194,7 @@ If token **stays the same**, attacker can fix your session.
 
 ***
 
-# **8. Step 6 — Test Cookie Signature (Important)**
+## **Step 6 — Test Cookie Signature (Important)**
 
 Look for two cookies:
 
@@ -213,7 +215,7 @@ Server accepts the cookie after modification → **session forging possible**
 
 ***
 
-# **9. Step 7 — Attempt Using Another User’s Token**
+## **Step 7 — Attempt Using Another User’s Token**
 
 ### How to test:
 
@@ -236,7 +238,7 @@ User B becomes User A
 
 ***
 
-# **10. Step 8 — Test Token Expiry & Logout**
+## **Step 8 — Test Token Expiry & Logout**
 
 ### A) Does token expire after logout?
 
@@ -268,7 +270,7 @@ FAIL:
 
 ***
 
-# **11. FINAL PASS / FAIL CHECKLIST**
+# **FINAL PASS / FAIL CHECKLIST**
 
 ### ✔ PASS if:
 
@@ -294,7 +296,3 @@ FAIL:
 *   No session timeout
 
 ***
-
-***
-
-If you want, I can generate a **Burp Suite step‑by‑step attack plan**, a **session security checklist**, or a **sample evidence sheet** you can paste into your audit.
